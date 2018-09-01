@@ -1,0 +1,61 @@
+/* mlstyle.css  */
+/* This is the website style sheet. It can be modified. */
+
+
+BODY {background-color: rgb(56,128,200)}
+
+@font-face { font-family: Encode Sans Semi Condensed; src: url('Encode.ttf'); } 
+@font-face { font-family: Encode Sans Semi Condensed; font-weight: regular; src: url('Encode.ttf');}
+
+a { text-decoration: none;
+      color: white;}
+
+a:hover  {color: rgb(251,188,5)}
+
+h1 {font-family: 24pt Encode Sans Semi Condensed, sans-serif;}
+
+h1 {color: white}
+
+h1 {text-align: center}
+    
+
+ul {font-family: 24pt Encode Sans Semi Condensed, sans-serif;}
+
+ul {color: white}
+
+ul {text-align: left}
+
+ol {color: white}
+
+ol {font: 16.5pt serif}
+
+object {text-align: center}
+
+
+p  {text-align: left}
+
+P {font: 16pt serif}
+
+P {color: white}
+
+ul
+{
+list-style-type: li;
+padding: 10;
+margin: 4em;
+text-align: center;
+width: 10em;
+}
+
+
+
+
+div.nav_bar  {position: absolute;
+              left: 15px;
+              top: 30px}
+
+
+div.main {margin-left:225px}
+
+
+

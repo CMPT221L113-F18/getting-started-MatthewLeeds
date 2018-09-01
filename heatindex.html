@@ -1,12 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sample Web App - Temperature Evaluator</title>
+    <noscript>"Your browser does not support JavaScript."</noscript>
+    <title>Heat Index Temperature Evaluator</title>
+    <link rel = "stylesheet" type = "text/css"
+          href = "mlstyle.css"/>
     <meta charset="utf-8"/>
   </head>
   <body>
-    <h1>Temperature Evaluator</h1>
-    <p>This simple Web application allows you to enter the current temperature, in degrees Fahrenheit, and will then assesses whether it is hot, cold, or some other appropriate adjective.</p>
+    <h1>How's the temperature?</h1>
+    <p>Enter the current temperature in degrees Fahrenheit, and I'll tell you what I think about it using a creative adjective.</p>
+    <p>Not sure what the weather is near you? Click <a href="https://www.accuweather.com/" target="_blank">here</a> to find out.</p>
     <form onsubmit="return false;">
       <label>
         Temp (F&deg;)
@@ -28,7 +32,7 @@
           feel = 'warm';
         else if (temp > 50)
           feel = 'nice';
-        else if (temp > 30)
+        else if (temp > 32)
           feel = 'cool';
         else
           feel = 'cold';
@@ -38,4 +42,3 @@
     </script>
   </body>
 </html>
-
