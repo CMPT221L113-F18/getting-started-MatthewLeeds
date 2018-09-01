@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <noscript>"Your browser does not support JavaScript."</noscript>
     <title>Heat Index Temperature Evaluator</title>
-    <link rel = "stylesheet" type = "text/css"
-          href = "mlstyle.css"/>
-    <meta charset="utf-8"/>
-  </head>
-  <body>
+    <link rel="stylesheet" type="text/css" href="mlstyle.css" />
+    <meta charset="UTF-8" />
+</head>
+
+<body>
     <h1>How's the temperature?</h1>
     <p>Enter the current temperature in degrees Fahrenheit, and I'll tell you what I think about it using a creative adjective.</p>
-    <p>Not sure what the weather is near you? Click <a href="https://www.accuweather.com/" target="_blank">here</a> to find out.</p>
+    <p>Not sure what the temperature is near you? <a href="https://www.accuweather.com/" target="_blank">Click here</a> to find out.</p>
     <form onsubmit="return false;">
-      <label>
-        Temp (F&deg;)
-        <input type="number" id="tempInput" value="0" />
-      </label>
-      <button onclick="assessTemperature();">Evaluate</button>
-      <output id="result"></output>
+        <label>
+            Temp (F&deg;)
+            <label> :</label>
+            </p>
+            <input type="number" id="tempInput" value="0" />
+        </label>
+        <button onclick="assessTemperature();">Evaluate</button>
+        <output id="result"></output>
     </form>
     <script>
-      function assessTemperature() {
-        var inputElem = document.querySelector('#tempInput');
-        var outputElem = document.querySelector('#result');
-        var temp = inputElem.value;
-        var feel;
+        function assessTemperature() {
+            var inputElem = document.querySelector('#tempInput');
+            var outputElem = document.querySelector('#result');
+            var temp = inputElem.value;
+            var feel;
 
-        if (temp > 90)
-          feel = 'hot';
-        else if (temp > 70)
-          feel = 'warm';
-        else if (temp > 50)
-          feel = 'nice';
-        else if (temp > 32)
-          feel = 'cool';
-        else
-          feel = 'cold';
+            if (temp > 90)
+                feel = 'hot';
+            else if (temp > 70)
+                feel = 'warm';
+            else if (temp > 50)
+                feel = 'nice';
+            else if (temp > 32)
+                feel = 'cool';
+            else
+                feel = 'cold';
 
-        outputElem.innerHTML = 'It is ' + feel + ' out there today.'
-      }
+            outputElem.innerHTML = 'It is ' + feel + ' out there today.'
+        }
     </script>
-  </body>
+    <div class="footer">
+        <p>Heat Index Temperature Evaluator</p>
+    </div>
+</body>
+
 </html>
