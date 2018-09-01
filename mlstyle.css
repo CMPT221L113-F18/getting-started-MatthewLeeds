@@ -51,10 +51,8 @@
  P {
      color: white 
 }
- ul {
-     margin: 4em;
-     text-align: center;
-     width: 10em;
+ center {
+     font: 12pt Encode Sans Semi Condensed, sans-serif;
 }
  label {
      font: 14pt Encode Sans Semi Condensed, sans-serif;
