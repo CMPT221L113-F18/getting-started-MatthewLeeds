@@ -7,7 +7,7 @@
 </head>
 <body>
 	<noscript>"Your browser does not support JavaScript."</noscript>
-	<h1>Thinking About Temperature?</h1>
+	<h1>Heat Index Calculator</h1>
     <p>Input the temperature in Fahrenheit and the relative humidity as a percentage between 0 and 100. Once both fields are completed, click "Evaluate" to determine the index.</p>
 	<p>Not sure what the temperature is near you? <a href="https://www.accuweather.com/" target="_blank">Click here</a> to find out.</p>
 	<p></p>
@@ -32,8 +32,10 @@
           feel = 'nice';
         else if (temp > 32)
           feel = 'cool';
+        else if (temp > 0)
+            feel = 'cold'
         else
-          feel = 'cold';
+          feel = 'really cold';
         outputElem.innerHTML = 'It is ' + feel + ' out there today.'
       }
 	</script>
