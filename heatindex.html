@@ -1,46 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Heat Index Calculator</title>
-	<link href="mlstyle.css" rel="stylesheet" type="text/css">
-	<meta charset="UTF-8">
+    <title>Heat Index Calculator</title>
+    <link href="mlstyle.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
 </head>
+
 <body>
-	<noscript>"Your browser does not support JavaScript."</noscript>
-	<h1>Heat Index Calculator</h1>
-    <p>Input the temperature in Fahrenheit and the relative humidity as a percentage between 0 and 100. Once both fields are completed, click "Evaluate" to determine the index.</p>
-	<p>Not sure what the temperature is near you? <a href="https://www.accuweather.com/" target="_blank">Click here</a> to find out.</p>
-	<p></p>
-	<form onsubmit="return false;">
-		<label>Temp (F°) <label>:</label><br>
-		<br>
-		<input id="tempInput" type="number" value="0">   </label>
-      <button onclick="assessTemperature();">Evaluate</button>
-      <output id="result"></output>
-	</form>
-	<script>
-	    function assessTemperature() {
-        var inputElem = document.querySelector('#tempInput');
-        var outputElem = document.querySelector('#result');
-        var temp = inputElem.value;
-        var feel;
-        if (temp > 90)
-          feel = 'hot';
-        else if (temp > 70)
-          feel = 'warm';
-        else if (temp > 50)
-          feel = 'nice';
-        else if (temp > 32)
-          feel = 'cool';
-        else if (temp > 0)
-            feel = 'cold'
-        else
-          feel = 'really cold';
-        outputElem.innerHTML = 'It is ' + feel + ' out there today.'
-      }
-	</script>
-	<div class="footer">
-        <p><center>Heat Index Calculator</center></p>
-	</div>
+    <noscript>"Your browser does not support JavaScript."</noscript>
+    <h1>Heat Index Calculator</h1>
+<p>Hey there pal! Ever wonder what the heat index is? Well, let me calculate it for you! <br> Input the temperature in Fahrneheit and the relative humidity as a percentage (between 0 and 100, please) in the boxes below. Once you're done, click "Evaluate", and voila: the Index will magically appear!</p>
+    <p>Not sure what the temperature is near you? <a href="https://www.accuweather.com/" target="_blank">Click here</a> to find out.</p>
+    <p></p>
+    <form onsubmit="return false;">
+        <label>Temp (F°)
+            <label>:</label>
+            <br>
+            <input id="tempInput" type="number" value="0"> </label>
+        <br />
+        <br />
+        <label>Relative Humidity (%):</label>
+        <br>
+        <input id="relativeInput" type="number" min="0" max="100">
+        <button onclick="assessTemperature();">Evaluate</button>
+        <br />
+        <br />
+        <p>Index:</p>
+        <output id="result"></output>
+    </form>
+    <script>
+        function assessTemperature() {
+            var inputElem = document.querySelector('#tempInput');
+            var inputElem2 = document.querySelector('#relativeInput');
+            var outputElem = document.querySelector('#result');
+            var temp = inputElem.value;
+            var feel;
+            if (temp > 90)
+                feel = 'hot';
+            else if (temp > 70)
+                feel = 'warm';
+            else if (temp > 50)
+                feel = 'nice';
+            else if (temp > 32)
+                feel = 'cool';
+            else if (temp > 0)
+                feel = 'cold'
+            else
+                feel = 'really cold';
+            outputElem.innerHTML = 'It is ' + feel + ' out there today.'
+        }
+    </script>
+    <div class="footer">
+        <p>
+            <center>Heat Index Calculator</center>
+        </p>
+    </div>
 </body>
+
 </html>
