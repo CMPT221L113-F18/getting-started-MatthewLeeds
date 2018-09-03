@@ -10,7 +10,7 @@
 <body>
     <noscript>"Your browser does not support JavaScript."</noscript>
     <h1>Heat Index Calculator</h1>
-<p>Hey there, pal! Ever wonder what the heat index is? Well, let me calculate it for you! <br> Input the temperature in Fahrneheit and the relative humidity as a percentage (between 0 and 100, please) in the boxes below. Once you're done, click "Evaluate", and voila: the Index will magically appear!</p>
+<p>Hey there, pal! Ever wonder what the heat index is? Well, let me calculate it for you! <br> Input the temperature in Fahrneheit and the relative humidity as a percentage (between 0 and 100, please) in the boxes below. Once you're done, click "Evaluate", and voila: the Index will magically appear!</p>    
     <p>Not sure what the temperature is near you? <a href="https://www.accuweather.com/" target="_blank">Click here</a> to find out.</p>
     <p></p>
     <form onsubmit="return false;">
@@ -36,9 +36,9 @@
             var outputElem = document.querySelector('#result');
             var temp = inputElem.value;
             var relHum = inputElem2.value;
-            var index;
+            var index; 
             
-            var calc = index = -42.379 + 2.04901523 * temp + 10.14333127 * relHum - 0.22475541 * temp * relHum - 0.00683783 * temp^2 - 0.05481717 * relHum^2 + 0.00122874 * temp^2 * relHum + 0.00085282 * temp * relHum^2 - 0.00000199 * temp2 * relHum^2
+            var index = -42.379 + 2.04901523 * temp + 10.14333127 * relHum - 0.22475541 * temp * relHum - 0.00683783 * temp^2 - 0.05481717 * relHum^2 + 0.00122874 * temp^2 * relHum + 0.00085282 * temp * relHum^2 - 0.00000199 * temp2 * relHum^2
             
             // if else statements
             outputElem.innerHTML = 'Heat index is ' + index + ' out there today.'
