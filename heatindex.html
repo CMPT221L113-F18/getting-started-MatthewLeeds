@@ -37,20 +37,25 @@
 
     <script>
         function normalCalculation() {
+            // Variables to hold user input
             var temp = document.querySelector('#temperature').value;
             var relHum = document.querySelector('#relativeHumidity').value;
 
+            // Turn number into percent value
             relHum = relHum / 100;
-
+            
+            // Raw calculation in js form
             var index = -42.379 + 2.04901523 * temp + 10.14333127 * relHum - 0.22475541 * temp * relHum - 0.00683783 * Math.pow(temp, 2) - 0.05481717 * Math.pow(relHum, 2) + 0.00122874 * Math.pow(temp, 2) * relHum + 0.00085282 * temp * Math.pow(relHum, 2) - 0.00000199 * Math.pow(temp, 2) * Math.pow(relHum, 2)
 
+            // Print result
             var result = document.querySelector('#result');
+            result.innerHTML = 'The heat index is ' + index + ' based on your inputs. '
             
-            result.innerHTML = 'Heat index is ' + index + ' based on your calculations. '
         }
     </script>
     <div class="footer">
         <p>
+            <!-- Footer -->
             <center>Heat Index Calculator</center>
         </p>
     </div>
