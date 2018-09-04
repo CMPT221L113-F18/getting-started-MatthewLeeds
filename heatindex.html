@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <title>Heat Index Calculator - Matthew Leeds - CMPT221L113-F18</title>
+     <!-- CSS/HTML Marriage -->
     <link href="mlstyle.css" rel="stylesheet" type="text/css">
+     <!-- Character Attribution -->
     <meta charset="UTF-8">
 </head>
 
 <body>
+     <!-- Non-supported users notice -->
     <noscript>"Your browser does not support JavaScript."</noscript>
+     <!-- h1 Title Header -->
     <h1>Heat Index Calculator</h1>
+     <!-- Introduction -->
     <p>Hey there, pal! Ever wonder what the heat index is? Well, let me calculate it for you!
-        <br> Input the temperature in Fahrneheit and the relative humidity as a percentage (between 0 and 100, please) in the boxes below. Once you're done, click "Evaluate", and voila: the Index will magically appear!</p>
+        <br> Input the temperature in Fahrenheit and the relative humidity as a percentage (between 0 and 100, please) in the boxes below. Once you're done, click "Evaluate", and voila: the Index will magically appear!</p>
     <p>Not sure what the temperature is near you? <a href="https://www.accuweather.com/" target="_blank">Click here</a> to find out.</p>
     <p></p>
+     <!-- Form -->
     <form onsubmit="return false;">
+        <!-- Temperature Label -->
         <label>Temp (F°):</label>
             <br>
             <input id="temperature" type="number" value="0"> </label>
@@ -22,19 +28,22 @@
         <br />
         <br />
 
+         <!-- Relative Humidity Label -->
         <label>Relative Humidity (%):</label>
         <br>
         <input id="relativeHumidity" type="number" min="0" max="100">
         
+         <!-- Result Label for Calculation -->
         <label id="result" /label>
         
+         <!-- Button to trigger script -->
         <button onclick="normalCalculation();">Evaluate</button>
             
         <br />
         <br />
             
     </form>
-
+    
     <script>
         function normalCalculation() {
             // Variables to hold user input
