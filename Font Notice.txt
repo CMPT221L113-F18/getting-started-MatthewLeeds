@@ -1,1 +1,1 @@
-The font, "Encode.ttf", is used in the Heat Index Calculator program and present in the repository for this assignment. 
+The font, "Encode.ttf", is used in the Heat Index Calculator web application and present in the repository for this assignment. 
